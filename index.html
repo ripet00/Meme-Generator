@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- framework bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+      integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+      crossorigin="anonymous"
+    />
+    <!-- font awesome framework -->
+    <script src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+  </head>
+  <body>
+    <div class="background-blue">
+      <header class="container-fluid">
+        <div class="container mx-auto text-center mb-5 title">
+          <h1 class="text-info">Meme Generator</h1>
+          <h2>
+            Insanely fast, Create your own unique memes with this Meme Generator
+          </h2>
+        </div>
+      </header>
+
+      <section class="container">
+        <form id="meme-form">
+          <!--Image section-->
+          <div class="group-form row mb-5">
+            <label for="link-to-pic" class="col-md-2 col-form-label"
+              >Image URL Here</label
+            >
+            <div class="col-md-10">
+              <input
+                type="url"
+                class="form-control"
+                id="uploaded-img"
+                placeholder="Your URL"
+              />
+            </div>
+          </div>
+          <!--Text top section of form-->
+          <div class="group-form row mb-5">
+            <label for="text-on-top" class="col-md-2 col-form-label"
+              >Text on top</label
+            >
+            <div class="col-md-10">
+              <input
+                type="text"
+                class="form-control"
+                id="text-top"
+                placeholder="Your text goes here"
+              />
+            </div>
+          </div>
+          <!--Text bottom section of form-->
+          <div class="group-form row mb-5">
+            <label for="text-on-top" class="col-md-2 col-form-label"
+              >Text on bottom</label
+            >
+            <div class="col-md-10">
+              <input
+                type="text"
+                class="form-control"
+                id="text-bottom"
+                placeholder="Your text goes here"
+              />
+            </div>
+          </div>
+          <!--Btn-->
+          <div class="group-form row mb-5">
+            <label class="col-md-2 col-form-label">&nbsp;</label>
+            <div class="col-md-2">
+              <input
+                type="submit"
+                class="btn btn-success"
+                value="Generate it"
+              />
+            </div>
+          </div>
+        </form>
+
+        <section class="meme-gallery">
+          <ul class="gallery"></ul>
+        </section>
+        <footer>
+          <div class="container-fluid footer">
+            <p>
+              Unique Meme Generator &#9400; 2024 by
+              <a href="htttps://ripet00.github.io">Rifat</a>
+            </p>
+          </div>
+        </footer>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
