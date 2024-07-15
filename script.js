@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   var memeForm = document.getElementById("meme-form");
-  var listGallery = document.querySelector(".galery");
+  var listGallery = document.querySelector(".gallery");
 
-  memeForm.addEventListener("submit", function (kejadian) {
-    kejadian.preventDefault();
+  memeForm.addEventListener("submit", function (event) {
+    event.preventDefault();
     // creating the li element
     var memeLi = document.createElement("li");
     memeLi.classList.add("meme-img");
@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var removeDiv = document.createElement("div");
     removeDiv.classList.add("red-cross");
     removeDiv.style.color = "red";
+    removeDiv.innerText = "X";
 
     listGallery.appendChild(memeLi);
     memeLi.appendChild(img);
@@ -40,3 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   listGallery.addEventListener("click", remove, false);
 });
+
+const currentYear = new Date().getFullYear();
+document.getElementById("currentYear").textContent = currentYear;
